@@ -1,0 +1,1061 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Kaizen — Coleção 01. Moda contemporânea inspirada na filosofia japonesa de melhoria contínua.">
+<title>KAIZEN — Coleção 01</title>
+
+<style>
+:root{
+  --black:#0b0b0b;
+  --black2:#141414;
+  --gold:#c7a35a;
+  --gold2:#e1c27a;
+  --white:#f8f7f4;
+  --gray:#a7a7a7;
+  --line:#292929;
+  --max:1180px;
+}
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  background:var(--black);
+  color:var(--white);
+  font-family:Arial,Helvetica,sans-serif;
+  line-height:1.6;
+  overflow-x:hidden;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+.container{
+  width:min(92%,var(--max));
+  margin:auto;
+}
+
+header{
+  position:sticky;
+  top:0;
+  z-index:100;
+  background:rgba(11,11,11,.94);
+  border-bottom:1px solid var(--line);
+  backdrop-filter:blur(10px);
+}
+
+.nav{
+  min-height:76px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:25px;
+}
+
+.logo{
+  font-size:25px;
+  font-weight:900;
+  letter-spacing:5px;
+}
+
+.instagram{
+  color:var(--gold);
+  font-size:13px;
+  letter-spacing:1px;
+}
+
+nav{
+  display:flex;
+  gap:25px;
+  align-items:center;
+}
+
+nav a{
+  font-size:12px;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
+  color:#ddd;
+}
+
+nav a:hover{
+  color:var(--gold);
+}
+
+.hero{
+  min-height:680px;
+  display:flex;
+  align-items:center;
+  border-bottom:1px solid var(--line);
+  background:
+    radial-gradient(circle at 75% 40%,rgba(199,163,90,.12),transparent 30%),
+    linear-gradient(135deg,#0b0b0b,#151515);
+}
+
+.hero-content{
+  max-width:800px;
+  padding:90px 0;
+}
+
+.eyebrow{
+  color:var(--gold);
+  font-size:12px;
+  letter-spacing:4px;
+  margin-bottom:25px;
+  text-transform:uppercase;
+}
+
+h1{
+  font-size:clamp(48px,9vw,100px);
+  line-height:.92;
+  letter-spacing:-4px;
+  text-transform:uppercase;
+  margin-bottom:30px;
+}
+
+.hero p{
+  max-width:650px;
+  color:#c7c7c7;
+  font-size:17px;
+}
+
+.button{
+  display:inline-block;
+  margin-top:35px;
+  padding:14px 24px;
+  border:1px solid var(--gold);
+  color:var(--gold);
+  text-transform:uppercase;
+  letter-spacing:2px;
+  font-size:12px;
+  transition:.25s;
+}
+
+.button:hover{
+  background:var(--gold);
+  color:#000;
+}
+
+section{
+  padding:100px 0;
+  border-bottom:1px solid var(--line);
+}
+
+.section-title{
+  font-size:clamp(32px,5vw,58px);
+  line-height:1;
+  margin-bottom:25px;
+}
+
+.section-subtitle{
+  color:var(--gray);
+  max-width:700px;
+}
+
+.concept{
+  display:grid;
+  grid-template-columns:1fr 1.6fr;
+  gap:80px;
+  align-items:start;
+}
+
+.symbol{
+  font-size:70px;
+  color:var(--gold);
+  line-height:1;
+}
+
+.small-title{
+  color:var(--gold);
+  font-size:12px;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  margin-bottom:15px;
+}
+
+.collection-header{
+  margin-bottom:65px;
+}
+
+.category{
+  margin-top:70px;
+}
+
+.category-title{
+  display:flex;
+  align-items:center;
+  gap:18px;
+  margin-bottom:30px;
+}
+
+.category-number{
+  font-size:42px;
+  color:var(--gold);
+  font-weight:300;
+}
+
+.category-name{
+  font-size:25px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+.products{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:25px;
+}
+
+.product-card{
+  background:var(--black2);
+  border:1px solid var(--line);
+  overflow:hidden;
+}
+
+.gallery{
+  position:relative;
+  aspect-ratio:4/4.7;
+  background:#171717;
+  overflow:hidden;
+}
+
+.gallery-track{
+  height:100%;
+  display:flex;
+  transition:transform .35s ease;
+}
+
+.gallery-track img{
+  width:100%;
+  height:100%;
+  flex:0 0 100%;
+  object-fit:cover;
+  display:block;
+}
+
+.arrow{
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  width:38px;
+  height:38px;
+  border:1px solid rgba(255,255,255,.5);
+  background:rgba(0,0,0,.55);
+  color:white;
+  cursor:pointer;
+  font-size:25px;
+  line-height:1;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.arrow:hover{
+  border-color:var(--gold);
+  color:var(--gold);
+}
+
+.prev{
+  left:12px;
+}
+
+.next{
+  right:12px;
+}
+
+.dots{
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:14px;
+  display:flex;
+  justify-content:center;
+  gap:7px;
+}
+
+.dot{
+  width:7px;
+  height:7px;
+  border-radius:50%;
+  border:0;
+  background:#777;
+  cursor:pointer;
+}
+
+.dot.active{
+  background:var(--gold);
+}
+
+.product-info{
+  padding:24px;
+}
+
+.product-label{
+  color:var(--gold);
+  font-size:10px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  margin-bottom:8px;
+}
+
+.product-name{
+  font-size:24px;
+  margin-bottom:10px;
+}
+
+.product-description{
+  color:#aaa;
+  font-size:13px;
+  margin-bottom:18px;
+}
+
+.details{
+  color:#ddd;
+  font-size:10px;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
+}
+
+.manifesto{
+  text-align:center;
+  padding:130px 20px;
+}
+
+.manifesto .small-title{
+  margin-bottom:30px;
+}
+
+.manifesto blockquote{
+  max-width:850px;
+  margin:auto;
+  font-size:clamp(28px,5vw,55px);
+  line-height:1.15;
+  font-weight:300;
+}
+
+.instagram-section{
+  text-align:center;
+}
+
+.instagram-section p{
+  color:var(--gray);
+  margin:15px auto 30px;
+}
+
+footer{
+  padding:35px 0;
+  color:#777;
+  font-size:11px;
+  letter-spacing:1.5px;
+  text-align:center;
+}
+
+@media(max-width:850px){
+  nav{
+    display:none;
+  }
+
+  .instagram{
+    font-size:11px;
+  }
+
+  .concept{
+    grid-template-columns:1fr;
+    gap:35px;
+  }
+
+  .products{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  h1{
+    letter-spacing:-2px;
+  }
+}
+
+@media(max-width:600px){
+  .nav{
+    min-height:65px;
+  }
+
+  .hero{
+    min-height:600px;
+  }
+
+  section{
+    padding:70px 0;
+  }
+
+  .products{
+    grid-template-columns:1fr;
+  }
+
+  .product-name{
+    font-size:22px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="container nav">
+    <a href="#inicio" class="logo">KAIZEN</a>
+
+    <nav>
+      <a href="#inicio">Início</a>
+      <a href="#colecao">Coleção 01</a>
+      <a href="#filosofia">Filosofia</a>
+      <a href="#instagram">Instagram</a>
+    </nav>
+
+    <a class="instagram"
+       href="https://www.instagram.com/kaizenva2026?igsh=aXo5OWhwcmZ4YXd1"
+       target="_blank">
+      @kaizenva2025
+    </a>
+  </div>
+</header>
+
+<main>
+
+<section class="hero" id="inicio">
+  <div class="container">
+    <div class="hero-content">
+
+      <div class="eyebrow">KAIZEN · COLEÇÃO 01</div>
+
+      <h1>
+        EVOLUÇÃO<br>
+        EM CADA<br>
+        DETALHE.
+      </h1>
+
+      <p>
+        Uma primeira expressão da Kaizen. Peças em preto, branco e dourado
+        que combinam referências japonesas, atitude urbana e identidade própria.
+      </p>
+
+      <a href="#colecao" class="button">
+        Conhecer a coleção
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<section id="filosofia">
+  <div class="container">
+
+    <div class="concept">
+
+      <div>
+        <div class="symbol">改善</div>
+      </div>
+
+      <div>
+        <div class="small-title">O conceito</div>
+
+        <h2 class="section-title">
+          Melhorar.<br>
+          Evoluir.<br>
+          Continuar.
+        </h2>
+
+        <p class="section-subtitle">
+          Kaizen significa melhoria contínua. A Coleção 01 traduz esse
+          princípio em peças que valorizam detalhes, contraste,
+          referências orientais e uma estética contemporânea.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<section id="colecao">
+  <div class="container">
+
+    <div class="collection-header">
+      <div class="small-title">Primeira coleção</div>
+
+      <h2 class="section-title">
+        Coleção 01
+      </h2>
+
+      <p class="section-subtitle">
+        Explore os modelos da primeira coleção da Kaizen.
+        Deslize as imagens de cada produto para visualizar
+        diferentes ângulos e detalhes.
+      </p>
+    </div>
+
+    <!-- MASCULINO -->
+
+    <div class="category">
+
+      <div class="category-title">
+        <div class="category-number">01</div>
+        <div class="category-name">Masculino</div>
+      </div>
+
+      <div class="products">
+
+        <!-- MODELO 01 -->
+
+        <article class="product-card">
+
+          <div class="gallery" data-gallery>
+            <div class="gallery-track">
+              <img src="images/hoodie_frente.jpg"
+                   alt="Hoodie Kaizen frente">
+              <img src="images/hoodie_costas.jpg"
+                   alt="Hoodie Kaizen costas">
+              <img src="images/hoodie_detalhes.jpg"
+                   alt="Detalhes do Hoodie Kaizen">
+            </div>
+
+            <button class="arrow prev"
+                    aria-label="Imagem anterior">‹</button>
+
+            <button class="arrow next"
+                    aria-label="Próxima imagem">›</button>
+
+            <div class="dots"></div>
+          </div>
+
+          <div class="product-info">
+
+            <div class="product-label">
+              Masculino · Modelo 01
+            </div>
+
+            <h3 class="product-name">
+              Hoodie Kaizen
+            </h3>
+
+            <p class="product-description">
+              Preto com detalhes metálicos dourados e modelagem
+              inspirada no streetwear japonês.
+            </p>
+
+            <div class="details">
+              Zíper metálico · Bolsos laterais · Detalhes dourados
+            </div>
+
+          </div>
+
+        </article>
+
+
+        <!-- MODELO 02 -->
+
+        <article class="product-card">
+
+          <div class="gallery" data-gallery>
+            <div class="gallery-track">
+              <img src="images/jeans_frente.jpg"
+                   alt="Jeans Kaizen frente">
+              <img src="images/jeans_costas.jpg"
+                   alt="Jeans Kaizen costas">
+              <img src="images/jeans_detalhe.jpg"
+                   alt="Detalhe do Jeans Kaizen">
+            </div>
+
+            <button class="arrow prev"
+                    aria-label="Imagem anterior">‹</button>
+
+            <button class="arrow next"
+                    aria-label="Próxima imagem">›</button>
+
+            <div class="dots"></div>
+          </div>
+
+          <div class="product-info">
+
+            <div class="product-label">
+              Masculino · Modelo 02
+            </div>
+
+            <h3 class="product-name">
+              Jeans Kaizen
+            </h3>
+
+            <p class="product-description">
+              Jeans preto de presença marcante, com acabamento
+              dourado e detalhe floral nas costas.
+            </p>
+
+            <div class="details">
+              Jeans preto · Botões dourados · Detalhe floral
+            </div>
+
+          </div>
+
+        </article>
+
+
+        <!-- MODELO 03 -->
+
+        <article class="product-card">
+
+          <div class="gallery" data-gallery>
+            <div class="gallery-track">
+              <img src="images/camiseta01.jpg"
+                   alt="Camiseta I Wasn't Made to Fit In">
+              <img src="images/camiseta01_detalhe.jpg"
+                   alt="Detalhe da camiseta I Wasn't Made to Fit In">
+            </div>
+
+            <button class="arrow prev"
+                    aria-label="Imagem anterior">‹</button>
+
+            <button class="arrow next"
+                    aria-label="Próxima imagem">›</button>
+
+            <div class="dots"></div>
+          </div>
+
+          <div class="product-info">
+
+            <div class="product-label">
+              Masculino · Modelo 03
+            </div>
+
+            <h3 class="product-name">
+              I Wasn't Made to Fit In
+            </h3>
+
+            <p class="product-description">
+              Camiseta preta com tipografia forte, textura desgastada
+              e elementos em dourado.
+            </p>
+
+            <div class="details">
+              Tipografia bold · Textura rachada · Detalhes em ouro
+            </div>
+
+          </div>
+
+        </article>
+
+
+        <!-- MODELO 04 -->
+
+        <article class="product-card">
+
+          <div class="gallery" data-gallery>
+            <div class="gallery-track">
+              <img src="images/camiseta02_frente.jpg"
+                   alt="Camiseta Kaizen Spider frente">
+              <img src="images/camiseta02_costas.jpg"
+                   alt="Camiseta Kaizen Spider costas">
+            </div>
+
+            <button class="arrow prev"
+                    aria-label="Imagem anterior">‹</button>
+
+            <button class="arrow next"
+                    aria-label="Próxima imagem">›</button>
+
+            <div class="dots"></div>
+          </div>
+
+          <div class="product-info">
+
+            <div class="product-label">
+              Masculino · Modelo 04
+            </div>
+
+            <h3 class="product-name">
+              Kaizen Spider
+            </h3>
+
+            <p class="product-description">
+              Composição em preto, branco e dourado, inspirada
+              em elementos japoneses e textura orgânica.
+            </p>
+
+            <div class="details">
+              Teia · Símbolo japonês · Pétalas de flor
+            </div>
+
+          </div>
+
+        </article>
+
+
+        <!-- MODELO 05 -->
+
+        <article class="product-card">
+
+          <div class="gallery" data-gallery>
+            <div class="gallery-track">
+              <img src="images/camiseta03_frente.jpg"
+                   alt="Camiseta I Choose My Own">
+              <img src="images/camiseta03_detalhe.jpg"
+                   alt="Detalhe da camiseta I Choose My Own">
+            </div>
+
+            <button class="arrow prev"
+                    aria-label="Imagem anterior">‹</button>
+
+            <button class="arrow next"
+                    aria-label="Próxima imagem">›</button>
+
+            <div class="dots"></div>
+          </div>
+
+          <div class="product-info">
+
+            <div class="product-label">
+              Masculino · Modelo 05
+            </div>
+
+            <h3 class="product-name">
+              I Choose My Own
+            </h3>
+
+            <p class="product-description">
+              Camiseta branca com mensagem central, composição gráfica
+              e detalhes de aparência artesanal.
+            </p>
+
+            <div class="details">
+              Tipografia · Detalhes dourados · Estética minimalista
+            </div>
+
+          </div>
+
+        </article>
+
+
+        <!-- MODELO 06 -->
+
+        <article class="product-card">
+
+          <div class="gallery" data-gallery>
+            <div class="gallery-track">
+              <img src="images/camiseta04_frente.jpg"
+                   alt="Camiseta Temple & Sakura">
+              <img src="images/camiseta04_detalhe.jpg"
+                   alt="Detalhe da camiseta Temple & Sakura">
+            </div>
+
+            <button class="arrow prev"
+                    aria-label="Imagem anterior">‹</button>
+
+            <button class="arrow next"
+                    aria-label="Próxima imagem">›</button>
+
+            <div class="dots"></div>
+          </div>
+
+          <div class="product-info">
+
+            <div class="product-label">
+              Masculino · Modelo 06
+            </div>
+
+            <h3 class="product-name">
+              Temple & Sakura
+            </h3>
+
+            <p class="product-description">
+              Estampa inspirada em templo, montanhas e sakura,
+              com contraste entre preto, branco e dourado.
+            </p>
+
+            <div class="details">
+              Templo · Monte Fuji · Sakura · Detalhes em ouro
+            </div>
+
+          </div>
+
+        </article>
+
+      </div>
+    </div>
+
+
+    <!-- FEMININO -->
+
+    <div class="category">
+
+      <div class="category-title">
+        <div class="category-number">02</div>
+        <div class="category-name">Feminino</div>
+      </div>
+
+      <div class="products">
+
+
+        <!-- FEMININO 01 -->
+
+        <article class="product-card">
+
+          <div class="gallery" data-gallery>
+            <div class="gallery-track">
+              <img src="images/cropped_frente.jpg"
+                   alt="Cropped Kaizen frente">
+              <img src="images/cropped_costas.jpg"
+                   alt="Cropped Kaizen costas">
+              <img src="images/cropped_etiqueta.jpg"
+                   alt="Etiqueta do Cropped Kaizen">
+            </div>
+
+            <button class="arrow prev"
+                    aria-label="Imagem anterior">‹</button>
+
+            <button class="arrow next"
+                    aria-label="Próxima imagem">›</button>
+
+            <div class="dots"></div>
+          </div>
+
+          <div class="product-info">
+
+            <div class="product-label">
+              Feminino · Modelo 01
+            </div>
+
+            <h3 class="product-name">
+              Cropped Kaizen
+            </h3>
+
+            <p class="product-description">
+              Cropped preto de silhueta ajustada com fechamento frontal
+              e aplicação gráfica nas costas.
+            </p>
+
+            <div class="details">
+              Modelagem cropped · Zíper frontal · Estampa dourada
+            </div>
+
+          </div>
+
+        </article>
+
+
+        <!-- FEMININO 02 -->
+
+        <article class="product-card">
+
+          <div class="gallery" data-gallery>
+            <div class="gallery-track">
+              <img src="images/conjunto_frente.jpg"
+                   alt="Conjunto Kaizen frente">
+              <img src="images/conjunto_costas.jpg"
+                   alt="Conjunto Kaizen costas">
+              <img src="images/conjunto_detalhes.jpg"
+                   alt="Detalhes do Conjunto Kaizen">
+            </div>
+
+            <button class="arrow prev"
+                    aria-label="Imagem anterior">‹</button>
+
+            <button class="arrow next"
+                    aria-label="Próxima imagem">›</button>
+
+            <div class="dots"></div>
+          </div>
+
+          <div class="product-info">
+
+            <div class="product-label">
+              Feminino · Modelo 02
+            </div>
+
+            <h3 class="product-name">
+              Conjunto Kaizen
+            </h3>
+
+            <p class="product-description">
+              Conjunto preto com detalhes em rosa, combinando
+              performance, estilo e referências orientais.
+            </p>
+
+            <div class="details">
+              Tecido suplex · Proteção UV 50+ · Silk premium
+            </div>
+
+          </div>
+
+        </article>
+
+
+        <!-- FEMININO 03 -->
+
+        <article class="product-card">
+
+          <div class="gallery" data-gallery>
+            <div class="gallery-track">
+              <img src="images/cargo_frente.jpg"
+                   alt="Calça Cargo Kaizen frente">
+              <img src="images/cargo_costas.jpg"
+                   alt="Calça Cargo Kaizen costas">
+              <img src="images/cargo_detalhes.jpg"
+                   alt="Detalhes da Calça Cargo Kaizen">
+            </div>
+
+            <button class="arrow prev"
+                    aria-label="Imagem anterior">‹</button>
+
+            <button class="arrow next"
+                    aria-label="Próxima imagem">›</button>
+
+            <div class="dots"></div>
+          </div>
+
+          <div class="product-info">
+
+            <div class="product-label">
+              Feminino · Modelo 03
+            </div>
+
+            <h3 class="product-name">
+              Calça Cargo Kaizen
+            </h3>
+
+            <p class="product-description">
+              Modelagem wide leg com bolsos cargo, acabamento premium
+              e bordado inspirado na identidade Kaizen.
+            </p>
+
+            <div class="details">
+              Wide leg · Jeans premium · Bolsos cargo · Bordado
+            </div>
+
+          </div>
+
+        </article>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<section class="manifesto">
+
+  <div class="container">
+
+    <div class="small-title">
+      Manifesto Kaizen
+    </div>
+
+    <blockquote>
+      “A evolução não acontece de uma vez.
+      Ela acontece em cada detalhe.”
+    </blockquote>
+
+  </div>
+
+</section>
+
+
+<section class="instagram-section" id="instagram">
+
+  <div class="container">
+
+    <div class="small-title">
+      Acompanhe a marca
+    </div>
+
+    <h2 class="section-title">
+      @kaizenva2025
+    </h2>
+
+    <p>
+      Novidades, referências e próximos capítulos da Kaizen.
+    </p>
+
+    <a
+      class="button"
+      href="https://www.instagram.com/kaizenva2026?igsh=aXo5OWhwcmZ4YXd1"
+      target="_blank">
+      Visitar Instagram
+    </a>
+
+  </div>
+
+</section>
+
+</main>
+
+
+<footer>
+  KAIZEN<br>
+  COLEÇÃO 01 · EVOLUÇÃO EM CADA DETALHE · © 2026
+</footer>
+
+
+<script>
+
+document.querySelectorAll('[data-gallery]').forEach(gallery=>{
+
+  const track=gallery.querySelector('.gallery-track');
+  const slides=[...track.children];
+  const prev=gallery.querySelector('.prev');
+  const next=gallery.querySelector('.next');
+  const dots=gallery.querySelector('.dots');
+
+  let index=0;
+
+
+  slides.forEach((_,i)=>{
+
+    const dot=document.createElement('button');
+
+    dot.className='dot'+(i===0?' active':'');
+    dot.setAttribute('aria-label','Ir para imagem '+(i+1));
+
+    dot.addEventListener('click',()=>go(i));
+
+    dots.appendChild(dot);
+
+  });
+
+
+  function go(i){
+
+    index=(i+slides.length)%slides.length;
+
+    track.style.transform=
+      `translateX(-${index*100}%)`;
+
+    [...dots.children].forEach((d,n)=>
+      d.classList.toggle('active',n===index)
+    );
+
+  }
+
+
+  prev.addEventListener('click',()=>{
+    go(index-1);
+  });
+
+
+  next.addEventListener('click',()=>{
+    go(index+1);
+  });
+
+});
+
+</script>
+
+</body>
+</html>
