@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="KAIZEN — Coleção 01. Moda contemporânea inspirada em referências japonesas, atitude urbana e melhoria contínua.">
-<title>KAIZEN — Especial Halloween</title>
+<title>KAIZEN</title>
 
 <!-- Fontes do Google Fonts para a Estética Japonesa -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,8 +12,11 @@
 <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;700;800&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="halloween.css">
-<script src="halloween.js" defer></script>
+<!-- Paleta: preto, branco e vermelho (inalterada) -->
+<link rel="stylesheet" href="Halloween/halloween.css">
+<!-- Novembro do Trap: drop exclusivo, esgotados -->
+<link rel="stylesheet" href="Trap/trap.css">
+
 </head>
 <body>
 
@@ -26,6 +29,7 @@
       <a href="#calcas">Calças</a>
       <a href="#camisetas">Camisetas</a>
       <a href="#conjuntos">Conjuntos</a>
+      <a href="#trap">Acessórios</a>
     </nav>
     
     <div class="nav-actions">
@@ -70,7 +74,8 @@
 <aside class="side-menu" id="side-menu">
   <button class="close-btn" id="close-menu" aria-label="Fechar menu">✕</button>
   <nav class="side-nav">
-    <a href="#halloween" class="side-link" style="color: var(--gold); text-shadow: 0 0 10px rgba(229,37,42,0.3);">Drop Halloween</a>
+    <a href="#trap" class="side-link" style="color: var(--gold); text-shadow: 0 0 10px rgba(229,37,42,0.3);">Novembro do Trap</a>
+    <a href="#halloween" class="side-link is-muted">Halloween · Esgotado</a>
     <a href="#colecao" class="side-link">Coleção 01</a>
     <a href="#manifesto" class="side-link">Manifesto</a>
     
@@ -79,7 +84,7 @@
       <p class="side-menu-intro">Transformamos referências orientais e linguagem urbana em peças de expressão e autenticidade.</p>
     </div>
   </nav>
-  <a href="https://www.instagram.com/kaizenva2026?igsh=aXo5OWhwcmZ4YXd1" class="side-link instagram" target="_blank" rel="noopener">@kaizenva2026</a>
+  <a href="https://www.instagram.com/kaizenva_?jplx=MWE0dzg1NW9vMXhoNw==" class="side-link instagram" target="_blank" rel="noopener">@kaizenva_</a>
 </aside>
 
 <!-- 2. Menu Lateral: Carrinho -->
@@ -107,47 +112,241 @@
   <div class="container hero-inner">
     <img class="brand-logo" src="image/logo/Emblema Kaizen com Leque Japonês.png" alt="Logo Kaizen">
     <div class="hero-copy">
-      <div class="eyebrow">Kaizen · Especial Halloween</div>
+      <div class="eyebrow">Kaizen · Novembro do Trap</div>
       <h1>EVOLUÇÃO<br>EM CADA DETALHE.</h1>
-      <p>Moda contemporânea com referências japonesas, atitude urbana e identidade própria. Conheça o nosso drop exclusivo de Halloween, disponível por tempo limitado.</p>
-      <a class="cta" href="#halloween">Ver Drop Halloween</a>
+      <p>Moda contemporânea com referências japonesas, atitude urbana e identidade própria. Conheça o nosso drop exclusivo de Novembro do Trap, em edição limitada.</p>
+      <a class="cta" href="#trap">Ver Drop Trap</a>
     </div>
   </div>
 </section>
 
-<div class="section-divider" aria-hidden="true"><span>02 · Edição Limitada</span></div>
+<div class="section-divider" aria-hidden="true"><span>02 · Drop Exclusivo</span></div>
 
-<section class="collection" id="halloween">
+<!-- ==========================================================================
+     DROP EXCLUSIVO: NOVEMBRO DO TRAP
+     ========================================================================== -->
+<section class="collection" id="trap">
   <div class="container">
     <div class="collection-head">
       <div>
         <div class="section-kicker">Drop Exclusivo</div>
-        <h2 class="halloween-mega-title" style="color: var(--gold); text-shadow: 0 0 15px rgba(229, 37, 42, 0.4);">Especial<br>Halloween</h2>
+        <h2 class="drop-mega-title">Novembro<br>do Trap</h2>
       </div>
-      <p>Uma seleção sombria e limitada. Peças exclusivas que unem a tradição japonesa à intensidade urbana da noite de Halloween.</p>
+      <p>Peças exclusivas que unem a atitude do trap à linguagem japonesa da Kaizen. Edição limitada.</p>
+    </div>
+
+    
+
+     <div class="products">
+
+      <!-- 1. Cinto -->
+      <article class="product-card">
+        <div class="product-gallery" data-gallery>
+          <div class="gallery-track">
+            <img src="image/produtos/trap-cinto-black-1.jpg" alt="Cinto Cravejado Onyx Kaizen" draggable="false">
+            <img src="image/produtos/trap-cinto-black-2.jpg" alt="Cinto Cravejado Onyx Kaizen Detalhes" draggable="false">
+          </div>
+          <button class="arrow prev" aria-label="Imagem anterior">‹</button>
+          <button class="arrow next" aria-label="Próxima imagem">›</button>
+          <div class="dots"></div>
+        </div>
+        <div class="product-info">
+          <div class="product-meta">Acessório · Novembro do Trap</div>
+          <h3><a href="produto.html?id=trap-cinto-black">Cinto Cravejado Onyx Kaizen</a></h3>
+          <div class="product-price" data-produto="trap-cinto-black">R$ XX,XX</div>
+          <p>Cinto preto totalmente cravejado com pedrarias escuras de alto brilho, fivela metálica personalizada e acabamento reforçado.</p>
+          <div class="tags">Trap · Exclusivo · Full Black</div>
+          <a class="product-link" href="produto.html?id=trap-cinto-black">Ver detalhes →</a>
+        </div>
+      </article>
+
+      <!-- 2. Kit Relógio + Pulseira -->
+      <article class="product-card">
+        <div class="product-gallery" data-gallery>
+          <div class="gallery-track">
+            <img src="image/produtos/trap-relogio-samurai-1.jpg" alt="Kit Relógio e Pulseira Samurai Ice" draggable="false">
+            <img src="image/produtos/trap-relogio-samurai-2.jpg" alt="Kit Relógio e Pulseira Samurai Ice no pulso" draggable="false">
+          </div>
+          <button class="arrow prev" aria-label="Imagem anterior">‹</button>
+          <button class="arrow next" aria-label="Próxima imagem">›</button>
+          <div class="dots"></div>
+        </div>
+        <div class="product-info">
+          <div class="product-meta">Acessório · Novembro do Trap</div>
+          <h3><a href="produto.html?id=trap-relogio-samurai">Kit Relógio &amp; Pulseira Samurai Ice</a></h3>
+          <div class="product-price" data-produto="trap-relogio-samurai">R$ XX,XX</div>
+          <p>Relógio cravejado com mostrador inspirado em armadura samurai acompanhado de pulseira estilo cubana com fecho reforçado.</p>
+          <div class="tags">Trap · Exclusivo · Samurai Ice</div>
+          <a class="product-link" href="produto.html?id=trap-relogio-samurai">Ver detalhes →</a>
+        </div>
+      </article>
+
+      <!-- 3. Corrente -->
+      <article class="product-card">
+        <div class="product-gallery" data-gallery>
+          <div class="gallery-track">
+            <img src="image/produtos/trap-corrente-samurai-1.jpg" alt="Corrente Cubana Samurai Kaizen" draggable="false">
+          </div>
+        </div>
+        <div class="product-info">
+          <div class="product-meta">Acessório · Novembro do Trap</div>
+          <h3><a href="produto.html?id=trap-corrente-samurai">Corrente Cubana Samurai Kaizen</a></h3>
+          <div class="product-price" data-produto="trap-corrente-samurai">R$ XX,XX</div>
+          <p>Corrente elo cubano cravejada em zircônias com pingente exclusivo de capacete samurai (Kabuto) rico em detalhes.</p>
+          <div class="tags">Trap · Exclusivo · Elo Cubano</div>
+          <a class="product-link" href="produto.html?id=trap-corrente-samurai">Ver detalhes →</a>
+        </div>
+      </article>
+
+      <!-- 4. Anel -->
+      <article class="product-card">
+        <div class="product-gallery" data-gallery>
+          <div class="gallery-track">
+            <img src="image/produtos/trap-anel-samurai-1.jpg" alt="Anel Kabuto Samurai Ice" draggable="false">
+          </div>
+        </div>
+        <div class="product-info">
+          <div class="product-meta">Acessório · Novembro do Trap</div>
+          <h3><a href="produto.html?id=trap-anel-samurai">Anel Kabuto Samurai Ice</a></h3>
+          <div class="product-price" data-produto="trap-anel-samurai">R$ XX,XX</div>
+          <p>Anel robusto cravejado em pedrarias de alto brilho com escultura frontal de máscara e elmo samurai.</p>
+          <div class="tags">Trap · Exclusivo · Kabuto</div>
+          <a class="product-link" href="produto.html?id=trap-anel-samurai">Ver detalhes →</a>
+        </div>
+      </article>
+
+    </div>
+
+      <!-- COMO ADICIONAR UMA PEÇA DO TRAP
+           1) Cadastre o produto no produtos.js (use drop: 'trap')
+           2) Copie o card abaixo, tirando as marcas de comentário, e troque os textos, as imagens e o ID
+
+      <article class="product-card">
+        <div class="product-gallery" data-gallery>
+          <div class="gallery-track">
+            <img src="image/produtos/ARQUIVO-1.jpg" alt="Nome da peça frente" draggable="false">
+            <img src="image/produtos/ARQUIVO-2.jpg" alt="Nome da peça costas" draggable="false">
+          </div>
+          <button class="arrow prev" aria-label="Imagem anterior">‹</button>
+          <button class="arrow next" aria-label="Próxima imagem">›</button>
+          <div class="dots"></div>
+        </div>
+        <div class="product-info">
+          <div class="product-meta">Novembro do Trap</div>
+          <h3><a href="produto.html?id=ID-DO-PRODUTO">Nome da peça</a></h3>
+          <div class="product-price" data-produto="ID-DO-PRODUTO">R$ XX,XX</div>
+          <p>Descrição da peça.</p>
+          <div class="tags">Trap · Exclusivo</div>
+          <a class="product-link" href="produto.html?id=ID-DO-PRODUTO">Ver detalhes →</a>
+        </div>
+      </article>
+      -->
+
+    
+  </div>
+</section>
+
+<div class="section-divider" aria-hidden="true"><span>03 · Drop Encerrado</span></div>
+
+<!-- ==========================================================================
+     DROP ENCERRADO: ESPECIAL HALLOWEEN (ESGOTADO)
+     Para marcar outra peça como esgotada, coloque esgotado: true no produtos.js
+     ========================================================================== -->
+<section class="collection" id="halloween">
+  <div class="container">
+    <div class="collection-head">
+      <div>
+        <div class="section-kicker">Drop Encerrado · Esgotado</div>
+        <h2 class="drop-mega-title is-ended">Especial<br>Halloween</h2>
+      </div>
+      <p>O drop de Halloween esgotou. Confira as peças do Novembro do Trap, o nosso drop exclusivo atual.</p>
     </div>
 
     <div class="products">
       <article class="product-card">
         <div class="product-gallery" data-gallery>
           <div class="gallery-track">
-            <img src="image/produtos/kaizen-spider-1.jpg" alt="Halloween Drop 1" draggable="false">
+            <img src="image/produtos/halloween-jeans-vinho-1.jpg" alt="Jeans Pumpkin Vinho, Drop Halloween" draggable="false">
           </div>
         </div>
         <div class="product-info">
-          <div class="product-meta">Edição Limitada</div>
-          <h3><a href="produto.html?id=spider">Kaizen Spider</a></h3>
-          <div class="product-price" data-produto="spider">R$ XX,XX</div>
-          <p>A estética da marca levada ao extremo. Uma peça central do evento de Halloween.</p>
-          <div class="tags">Halloween · Exclusivo</div>
-          <a class="product-link" href="produto.html?id=spider">Ver detalhes →</a>
+          <div class="product-meta">Calça · Halloween</div>
+          <h3><a href="produto.html?id=halloween-jeans-vinho">Jeans Pumpkin Vinho</a></h3>
+          <div class="product-price" data-produto="halloween-jeans-vinho">R$ XX,XX</div>
+          <p>Jeans wide leg vinho com estampa branca de abóbora e fumaça. Algodão 100%, etiqueta em couro ecológico e botões personalizados.</p>
+          <div class="tags">Halloween · Esgotado</div>
+          <a class="product-link" href="produto.html?id=halloween-jeans-vinho">Ver detalhes →</a>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <div class="product-gallery" data-gallery>
+          <div class="gallery-track">
+            <img src="image/produtos/halloween-conjunto-reaper-1.jpg" alt="Conjunto Reaper Kaizen, Drop Halloween" draggable="false">
+          </div>
+        </div>
+        <div class="product-info">
+          <div class="product-meta">Conjunto · Halloween</div>
+          <h3><a href="produto.html?id=halloween-conjunto-reaper">Conjunto Reaper Kaizen</a></h3>
+          <div class="product-price" data-produto="halloween-conjunto-reaper">R$ XX,XX</div>
+          <p>Moletom e calça wide leg pretos com ceifador, teias e aranhas em bordado e estampa. Cordão personalizado no cós.</p>
+          <div class="tags">Halloween · Esgotado</div>
+          <a class="product-link" href="produto.html?id=halloween-conjunto-reaper">Ver detalhes →</a>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <div class="product-gallery" data-gallery>
+          <div class="gallery-track">
+            <img src="image/produtos/halloween-conjunto-web-1.jpg" alt="Conjunto Web Kaizen, Drop Halloween" draggable="false">
+          </div>
+        </div>
+        <div class="product-info">
+          <div class="product-meta">Conjunto · Halloween</div>
+          <h3><a href="produto.html?id=halloween-conjunto-web">Conjunto Web Kaizen</a></h3>
+          <div class="product-price" data-produto="halloween-conjunto-web">R$ XX,XX</div>
+          <p>Top cropped e calça flare pretos com bordado de teia em vermelho e pedrarias. Cordões laterais em ilhós.</p>
+          <div class="tags">Halloween · Esgotado</div>
+          <a class="product-link" href="produto.html?id=halloween-conjunto-web">Ver detalhes →</a>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <div class="product-gallery" data-gallery>
+          <div class="gallery-track">
+            <img src="image/produtos/halloween-camiseta-web-1.jpg" alt="Camiseta Web Kaizen, Drop Halloween" draggable="false">
+          </div>
+        </div>
+        <div class="product-info">
+          <div class="product-meta">Camiseta · Halloween</div>
+          <h3><a href="produto.html?id=halloween-camiseta-web">Camiseta Web Kaizen</a></h3>
+          <div class="product-price" data-produto="halloween-camiseta-web">R$ XX,XX</div>
+          <p>Camiseta masculina preta, urbana e minimalista, com teia de aranha vermelha no ombro, na frente e nas costas.</p>
+          <div class="tags">Halloween · Esgotado</div>
+          <a class="product-link" href="produto.html?id=halloween-camiseta-web">Ver detalhes →</a>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <div class="product-gallery" data-gallery>
+          <div class="gallery-track">
+            <img src="image/produtos/halloween-camiseta-bat-1.jpg" alt="Camiseta Bat Kaizen, Drop Halloween" draggable="false">
+          </div>
+        </div>
+        <div class="product-info">
+          <div class="product-meta">Camiseta · Halloween</div>
+          <h3><a href="produto.html?id=halloween-camiseta-bat">Camiseta Bat Kaizen</a></h3>
+          <div class="product-price" data-produto="halloween-camiseta-bat">R$ XX,XX</div>
+          <p>Camiseta assimétrica branca com barra de ilhós e morcego em vermelho. Assinatura com morcego nas costas.</p>
+          <div class="tags">Halloween · Esgotado</div>
+          <a class="product-link" href="produto.html?id=halloween-camiseta-bat">Ver detalhes →</a>
         </div>
       </article>
     </div>
   </div>
 </section>
 
-<div class="section-divider" aria-hidden="true"><span>03 · Arquivo da Marca</span></div>
+<div class="section-divider" aria-hidden="true"><span>04 · Arquivo da Marca</span></div>
 
 <!-- ==========================================================================
      CATÁLOGO SECUNDÁRIO (ARQUIVO / COLEÇÃO 01)
@@ -409,9 +608,9 @@
 <section class="instagram-section">
   <div class="container">
     <div class="section-kicker">Acompanhe a marca</div>
-    <div class="handle">@kaizenva2026</div>
+    <div class="handle">@kaizenva_</div>
     <p>Novidades, referências e próximos capítulos da Kaizen.</p>
-    <a class="cta" href="https://www.instagram.com/kaizenva2026?igsh=aXo5OWhwcmZ4YXd1" target="_blank" rel="noopener">Visitar Instagram</a>
+    <a class="cta" href="https://www.instagram.com/kaizenva_?jplx=MWE0dzg1NW9vMXhoNw==" target="_blank" rel="noopener">Visitar Instagram</a>
   </div>
 </section>
 </main>
@@ -419,7 +618,7 @@
 <footer>
   <div class="container footer">
     <strong>KAIZEN</strong>
-    <span>ESPECIAL HALLOWEEN · EVOLUÇÃO EM CADA DETALHE · © 2026</span>
+    <span>NOVEMBRO DO TRAP · EVOLUÇÃO EM CADA DETALHE · © 2026</span>
   </div>
 </footer>
 

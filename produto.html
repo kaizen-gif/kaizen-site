@@ -9,7 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;700;800&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="halloween.css">
-<script src="halloween.js" defer></script>
+<link rel="stylesheet" href="trap.css">
 </head>
 <body>
 
@@ -66,7 +66,8 @@
 <aside class="side-menu" id="side-menu">
   <button class="close-btn" id="close-menu" aria-label="Fechar menu">✕</button>
   <nav class="side-nav">
-    <a href="index.html#halloween" class="side-link" style="color: var(--gold); text-shadow: 0 0 10px rgba(229,37,42,0.3);">Drop Halloween</a>
+    <a href="index.html#trap" class="side-link" style="color: var(--gold); text-shadow: 0 0 10px rgba(229,37,42,0.3);">Novembro do Trap</a>
+    <a href="index.html#halloween" class="side-link is-muted">Halloween · Esgotado</a>
     <a href="index.html#colecao" class="side-link">Coleção 01</a>
     <a href="index.html#manifesto" class="side-link">Manifesto</a>
     
@@ -150,7 +151,7 @@
 <footer>
   <div class="container footer">
     <strong>KAIZEN</strong>
-    <span>ESPECIAL HALLOWEEN · EVOLUÇÃO EM CADA DETALHE · © 2026</span>
+    <span>NOVEMBRO DO TRAP · EVOLUÇÃO EM CADA DETALHE · © 2026</span>
   </div>
 </footer>
 
@@ -159,5 +160,20 @@
 <script src="carrinho.js"></script>
 <script src="menus.js"></script>
 <script src="produto.js"></script>
+
+<!-- Aviso visível se algum script não carregar (pode apagar depois de tudo funcionando) -->
+<script>
+(function () {
+  var titulo = document.getElementById('pd-titulo');
+  if (!titulo || titulo.textContent !== 'Carregando...') return;
+  var faltando = [];
+  if (typeof PRODUTOS === 'undefined') faltando.push('produtos.js');
+  if (!window.KaizenCart) faltando.push('carrinho.js');
+  titulo.textContent = 'Erro ao carregar a página';
+  document.getElementById('pd-descricao').textContent = faltando.length
+    ? 'Estes arquivos não carregaram ou estão desatualizados: ' + faltando.join(', ') + '. Confira se estão na mesma pasta do produto.html.'
+    : 'O produto.js não carregou ou está desatualizado. Substitua pelo arquivo novo e atualize com Ctrl+F5.';
+})();
+</script>
 </body>
 </html>

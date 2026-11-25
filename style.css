@@ -164,6 +164,8 @@ header {
   height: auto;
   display: block;
   margin: auto;
+  filter: invert(1);
+  mix-blend-mode: multiply;
 }
 
 .hero-copy {

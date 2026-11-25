@@ -1,0 +1,415 @@
+/* ==========================================================================
+   ESTÉTICA JAPONESA & ESTRUTURA DE DROPS — PALETA ORIGINAL KAIZEN
+   (Papel #f7f6f2, Branco #ffffff, Tinta #111111 e Ouro #b18a43)
+   ========================================================================== */
+
+:root {
+  /* Mapeia as variáveis para a paleta original definida no style.css */
+  --hw-black:       var(--white);   /* #ffffff */
+  --hw-coal:        var(--paper);   /* #f7f6f2 */
+  --hw-crypt:       #f4f3ef;        /* Fundo suave dos cards */
+
+  --hw-blood:       var(--gold);    /* #b18a43 */
+  --hw-blood-light: var(--gold);    /* #b18a43 */
+  --hw-blood-dark:  var(--line);    /* #deddd8 */
+
+  --hw-bone:        var(--ink);     /* #111111 */
+  --hw-ash:         var(--muted);   /* #686866 */
+  --hw-smoke:       #888886;
+
+  /* Tipografia */
+  --hw-font-jp: 'Shippori Mincho', 'Hiragino Mincho ProN', 'Yu Mincho', 'Noto Serif JP', serif;
+  --hw-font-urban: 'Space Grotesk', system-ui, -apple-system, sans-serif;
+}
+
+/* ==========================================================================
+   TIPOGRAFIA - ESTÉTICA JAPONESA / URBANA
+   ========================================================================== */
+
+body {
+  font-family: var(--hw-font-urban);
+  background: var(--paper);
+  color: var(--ink);
+}
+
+h1, h2, h3, h4, h5, h6, .wordmark, .section-kicker, .eyebrow, .manifesto-text {
+  font-family: var(--hw-font-jp);
+  letter-spacing: 0.05em;
+}
+
+h1 {
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.eyebrow, .section-kicker {
+  font-family: var(--hw-font-urban);
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+::selection {
+  background: var(--gold);
+  color: var(--white);
+}
+
+/* ==========================================================================
+   TOPO (HEADER) & HERO
+   ========================================================================== */
+
+header {
+  background: rgba(247, 246, 242, 0.96);
+  border-bottom: 1px solid var(--line);
+}
+
+.cta {
+  border-color: var(--ink);
+  color: var(--ink);
+}
+
+.cta:hover {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: var(--white);
+}
+
+/* Detalhe dourado antes dos rótulos de seção */
+.eyebrow::before,
+.section-kicker::before {
+  content: "";
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  background: var(--gold);
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+/* Kanji ao lado do logo no topo */
+.wordmark::after {
+  content: "改善";
+  font-family: var(--hw-font-jp);
+  font-size: 11px;
+  letter-spacing: 3px;
+  color: var(--gold);
+  margin-left: 14px;
+  vertical-align: middle;
+}
+
+/* Hero com kanji vertical sutil ao fundo */
+.hero {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.hero::after {
+  content: "改善";
+  position: absolute;
+  right: 2%;
+  top: 50%;
+  transform: translateY(-50%);
+  writing-mode: vertical-rl;
+  font-family: var(--hw-font-jp);
+  font-size: clamp(70px, 10vw, 150px);
+  letter-spacing: 0.1em;
+  line-height: 1;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(177, 138, 67, 0.22);
+  pointer-events: none;
+  z-index: -1;
+}
+
+.brand-logo {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 240px;
+}
+
+@media (min-width: 761px) {
+  .hero-inner {
+    grid-template-columns: 280px 1fr;
+    gap: 70px;
+  }
+}
+
+/* ==========================================================================
+   GALERIA E MOLDURAS EM "L" DOURADAS
+   ========================================================================== */
+
+.product-gallery {
+  background: #f4f3ef;
+  border: 1px solid var(--line);
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.product-card:hover .product-gallery {
+  border-color: var(--gold);
+  box-shadow: 0 12px 30px rgba(17, 17, 17, 0.06);
+}
+
+.product-gallery::before,
+.product-gallery::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  pointer-events: none;
+  z-index: 2;
+  transition: width 0.3s, height 0.3s;
+}
+
+.product-gallery::before {
+  top: 10px;
+  left: 10px;
+  border-top: 1.5px solid var(--gold);
+  border-left: 1.5px solid var(--gold);
+}
+
+.product-gallery::after {
+  bottom: 10px;
+  right: 10px;
+  border-bottom: 1.5px solid var(--gold);
+  border-right: 1.5px solid var(--gold);
+}
+
+.product-card:hover .product-gallery::before,
+.product-card:hover .product-gallery::after {
+  width: 34px;
+  height: 34px;
+}
+
+/* Links dos cards */
+.product-info h3 a {
+  color: inherit;
+  transition: color 0.2s;
+}
+
+.product-info h3 a:hover {
+  color: var(--gold);
+}
+
+.product-link {
+  display: inline-block;
+  margin-top: 16px;
+  font-size: 10px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--ink);
+  border-bottom: 1px solid var(--gold);
+  padding-bottom: 3px;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.product-link:hover {
+  color: var(--gold);
+}
+
+/* ==========================================================================
+   MANIFESTO: CARIMBO (HANKO) EM DOURADO/PRETO
+   ========================================================================== */
+
+.manifesto {
+  position: relative;
+  overflow: hidden;
+}
+
+.manifesto::after {
+  content: "改";
+  position: absolute;
+  right: max(4%, calc((100% - var(--max)) / 2));
+  bottom: 56px;
+  width: 74px;
+  height: 74px;
+  display: grid;
+  place-items: center;
+  background: var(--gold);
+  color: var(--white);
+  font-family: var(--hw-font-jp);
+  font-size: 42px;
+  line-height: 1;
+  border-radius: 6px;
+  transform: rotate(6deg);
+  opacity: 0.9;
+  pointer-events: none;
+}
+
+/* ==========================================================================
+   PÁGINA DE PRODUTO & CARRINHO (PALETA CLARA ORIGINAL)
+   ========================================================================== */
+
+.pd-back {
+  display: inline-block;
+  margin-top: 30px;
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--muted);
+  transition: color 0.2s;
+}
+
+.pd-back:hover {
+  color: var(--gold);
+}
+
+.product-page-image #pd-imagem {
+  background: #f4f3ef;
+  border: 1px solid var(--line);
+  border-radius: 0;
+  object-fit: contain;
+  aspect-ratio: 4 / 5;
+  display: block;
+}
+
+.pd-thumbs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.pd-thumb {
+  width: 72px;
+  height: 90px;
+  padding: 0;
+  background: #f4f3ef;
+  border: 1px solid var(--line);
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+
+.pd-thumb:hover,
+.pd-thumb.active {
+  border-color: var(--gold);
+}
+
+.product-page-image .pd-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.pd-aviso {
+  color: var(--gold);
+  font-size: 13px;
+  margin: -12px 0 20px;
+}
+
+.add-to-cart-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* Carrinho lateral */
+.cart-list {
+  list-style: none;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.cart-item {
+  display: grid;
+  grid-template-columns: 64px 1fr auto;
+  gap: 14px;
+  align-items: start;
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--line);
+}
+
+.cart-item img {
+  width: 64px;
+  height: 80px;
+  object-fit: contain;
+  background: #f4f3ef;
+  border: 1px solid var(--line);
+}
+
+.cart-info strong {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.cart-info > span {
+  display: block;
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.cart-qty {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+  font-size: 13px;
+}
+
+.cart-qty button {
+  width: 26px;
+  height: 26px;
+  background: transparent;
+  border: 1px solid var(--line);
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.cart-qty button:hover {
+  border-color: var(--ink);
+}
+
+.cart-remove {
+  background: none;
+  border: 0;
+  color: var(--muted);
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.cart-remove:hover {
+  color: var(--ink);
+}
+
+.cart-total {
+  display: flex;
+  justify-content: space-between;
+  margin: 24px 0 6px;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.cart-checkout {
+  width: 100%;
+  margin-top: 18px;
+  background: var(--ink);
+  border-color: var(--ink);
+  color: var(--white);
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.cart-checkout:hover {
+  background: var(--gold);
+  border-color: var(--gold);
+}
+
+@media (max-width: 760px) {
+  .wordmark::after,
+  .hero::after {
+    display: none;
+  }
+
+  .manifesto::after {
+    width: 54px;
+    height: 54px;
+    font-size: 32px;
+    right: 6%;
+    bottom: 14px;
+  }
+}
