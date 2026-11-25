@@ -150,3 +150,57 @@
 .side-link.is-muted:hover {
   color: var(--gold);
 }
+
+@media (max-width: 768px) {
+  /* Evita vazamento horizontal na página */
+  html, body {
+    overflow-x: hidden;
+    max-width: 100%;
+  }
+
+  /* Ajusta o título principal da Hero para não cortar nas bordas */
+  .hero h1,
+  .hero-title {
+    font-size: clamp(2.1rem, 9vw, 3rem);
+    line-height: 1.1;
+    word-break: break-word;
+  }
+
+  .hero p,
+  .hero-subtitle {
+    max-width: 100%;
+    padding: 0 8px;
+    box-sizing: border-box;
+  }
+
+  /* Empilha o título "NOVEMBRO DO TRAP" e a descrição no mobile */
+  #trap .section-head,
+  #trap .drop-header,
+  .halloween-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  #trap h2,
+  .halloween-title {
+    font-size: clamp(2rem, 8.5vw, 2.8rem);
+    line-height: 1.1;
+    max-width: 100%;
+  }
+
+  #trap .section-head p,
+  #trap .drop-header p,
+  .halloween-desc {
+    max-width: 100%;
+    text-align: left;
+  }
+
+  /* Garante que a grade de acessórios fique em 1 ou 2 colunas no celular */
+  #trap .products-grid,
+  #trap .grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
