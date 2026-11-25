@@ -141,7 +141,7 @@ var PRODUTOS = {
   'trap-relogio-samurai': {
     titulo: 'Kit Relógio & Pulseira Samurai Ice',
     categoria: 'Acessório',
-    preco: null,
+    preco: 199.90,
     drop: 'trap',
     descricao: 'Relógio cravejado com mostrador inspirado em armadura samurai acompanhado de pulseira estilo cubana com fecho reforçado.',
     imagens: ['trap-relogio-samurai-1.jpg', 'trap-relogio-samurai-2.jpg']
@@ -149,7 +149,7 @@ var PRODUTOS = {
   'trap-corrente-samurai': {
     titulo: 'Corrente Cubana Samurai Kaizen',
     categoria: 'Acessório',
-    preco: null,
+    preco: 199.90,
     drop: 'trap',
     descricao: 'Corrente elo cubano cravejada em zircônias com pingente exclusivo de capacete samurai (Kabuto) rico em detalhes.',
     imagens: ['trap-corrente-samurai-1.jpg']
@@ -157,7 +157,7 @@ var PRODUTOS = {
   'trap-anel-samurai': {
     titulo: 'Anel Kabuto Samurai Ice',
     categoria: 'Acessório',
-    preco: null,
+    preco: 199.90,
     drop: 'trap',
     descricao: 'Anel robusto cravejado em pedrarias de alto brilho com escultura frontal de máscara e elmo samurai.',
     imagens: ['trap-anel-samurai-1.jpg']
